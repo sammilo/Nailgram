@@ -1,8 +1,8 @@
 import React from 'react'
 import '../App.css'
 
-const CreateCar = () => {
-
+const EditNails = () => {
+    
     return (
         <div>
 
@@ -10,4 +10,4 @@ const CreateCar = () => {
     )
 }
 
-export default CreateCar
+export default EditNails

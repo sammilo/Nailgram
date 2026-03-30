@@ -1,13 +1,13 @@
 import React from 'react'
 import '../App.css'
 
-const ViewCars = () => {
-    
+const CreateNails = () => {
+
     return (
         <div>
-            
+
         </div>
     )
 }
 
-export default ViewCars
+export default CreateNails
