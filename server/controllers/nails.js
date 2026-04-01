@@ -37,7 +37,7 @@ const editNails = async (req, res) => {
         const id = parseInt(req.params.id);
         const { name, shape, length, color, effect, price, image } = req.body
         const result = await pool.query(
-            'UPDATE nails SET name = $1, shape = $2, length = $3, color = $4, effect = $5, price = $6, image = $7 WHERE id = $8',
+            'UPDATE nails SET name = $1, shape = $2, length = $3, color = $4, effect = $5, price = $6, image = $7 WHERE id = $8 RETURNING *',
             [name, shape, length, color, effect, price, image, id]
         );
         res.status(200).json(result.rows[0]);
@@ -49,7 +49,7 @@ const editNails = async (req, res) => {
 const deleteNails = async (req, res) => {
     try {
         const id = parseInt(req.params.id);
-        const result = await pool.query('DELETE FROM nails WHERE id = $1' , [id]) ;
+        const result = await pool.query('DELETE FROM nails WHERE id = $1 RETURNING *' , [id]) ;
         res.status(200).json(result.rows[0]);
     } catch (error) {
         res.status(409).json({error: error.message});
