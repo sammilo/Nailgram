@@ -14,3 +14,21 @@ const createTable = `
         image VARCHAR(500) NOT NULL
     );
 `
+
+const seedData = `
+    INSERT INTO nails (name, shape, length, color, effect, price, image) VALUES
+    ('Rosy Almond',       'A', 'M', 'P', 'G', '$45', 'AMPG.png'),
+    ('Midnight Coffin',   'C', 'L', 'B', 'M', '$55', 'CLBM.png'),
+    ('Sapphire Stiletto', 'S', 'L', 'S', 'A', '$50', 'SLSA.png'),
+    ('Pink Shimmer',      'A', 'S', 'P', 'S', '$40', 'ASPS.png');
+`
+
+const setup = async () => {
+    await pool.query(createTable)
+    console.log('Table created')
+    await pool.query(seedData)
+    console.log('Seed data inserted')
+    pool.end()
+}
+
+setup()

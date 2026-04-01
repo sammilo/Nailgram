@@ -49,7 +49,7 @@ const editNails = async (req, res) => {
 const deleteNails = async (req, res) => {
     try {
         const id = parseInt(req.params.id);
-        const result = await pool.query('DELETE FROM nails WHERE id = $1', [id]);
+        const result = await pool.query('DELETE FROM nails WHERE id = $1' , [id]) ;
         res.status(200).json(result.rows[0]);
     } catch (error) {
         res.status(409).json({error: error.message});
