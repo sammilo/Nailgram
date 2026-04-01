@@ -1,6 +1,6 @@
 import { pool } from '../config/database.js'
 
-export const createNails = async (req, res) => {
+const createNails = async (req, res) => {
     try {
         const { name, shape, length, color, effect, price, image } = req.body
         const result = await pool.query(
@@ -13,7 +13,7 @@ export const createNails = async (req, res) => {
     }
 }
 
-export const getNails = async (req, res) => {
+const getNails = async (req, res) => {
     try {
         const results = await pool.query('SELECT * FROM nails ORDER BY id ASC');
         res.status(200).json(results.rows);
@@ -22,7 +22,7 @@ export const getNails = async (req, res) => {
     }
 }
 
-export const getNailsById = async (req, res) => {
+const getNailsById = async (req, res) => {
     try {
         const id = parseInt(req.params.id);
         const result = await pool.query('SELECT * FROM nails WHERE id = $1', [id]);
@@ -32,7 +32,7 @@ export const getNailsById = async (req, res) => {
     }
 }
 
-export const editNails = async (req, res) => {
+const editNails = async (req, res) => {
     try {
         const id = parseInt(req.params.id);
         const { name, shape, length, color, effect, price, image } = req.body
@@ -46,7 +46,7 @@ export const editNails = async (req, res) => {
     }
 }
 
-export const deleteNails = async (req, res) => {
+const deleteNails = async (req, res) => {
     try {
         const id = parseInt(req.params.id);
         const result = await pool.query('DELETE FROM nails WHERE id = $1', [id]);
@@ -54,4 +54,12 @@ export const deleteNails = async (req, res) => {
     } catch (error) {
         res.status(409).json({error: error.message});
     }
+}
+
+export default {
+    createNails,
+    getNails,
+    getNailsById,
+    editNails,
+    deleteNails
 }
