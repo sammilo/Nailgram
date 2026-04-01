@@ -4,7 +4,7 @@ Submitted by: **Samantha Milo**
 
 About this web app: **Allows users to create custom nail looks and save, edit, or delete the looks.**
 
-Time spent: **5** hours
+Time spent: **13** hours
 
 ## Required Features
 
@@ -13,19 +13,19 @@ The following **required** functionality is completed:
 <!-- Make sure to check off completed functionality below -->
 - [X] **The web app uses React to display data from the API.**
 - [X] **The web app is connected to a PostgreSQL database, with an appropriately structured `CustomItem` table.**
-- [ ]  **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
-- [ ]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
-- [ ] **Users can view **multiple** features of the `CustomItem` (e.g. car) they can customize, (e.g. wheels, exterior, etc.)**
-- [ ] **Each customizable feature has multiple options to choose from (e.g. exterior could be red, blue, black, etc.)**
-- [ ] **On selecting each option, the displayed visual icon for the `CustomItem` updates to match the option the user chose.**
+- [X]  **NOTE: Your walkthrough added to the README must include a view of your Neon dashboard demonstrating that your Postgres database is available**
+- [X]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
+- [X] **Users can view **multiple** features of the `CustomItem` (e.g. car) they can customize, (e.g. wheels, exterior, etc.)**
+- [X] **Each customizable feature has multiple options to choose from (e.g. exterior could be red, blue, black, etc.)**
+- [X] **On selecting each option, the displayed visual icon for the `CustomItem` updates to match the option the user chose.**
 - [ ] **The price of the `CustomItem` (e.g. car) changes dynamically as different options are selected *OR* The app displays the total price of all features.**
-- [ ] **The visual interface changes in response to at least one customizable feature.**
-- [ ] **The user can submit their choices to save the item to the list of created `CustomItem`s.**
+- [X] **The visual interface changes in response to at least one customizable feature.**
+- [X] **The user can submit their choices to save the item to the list of created `CustomItem`s.**
 - [ ] **If a user submits a feature combo that is impossible, they should receive an appropriate error message and the item should not be saved to the database.**
-- [ ] **Users can view a list of all submitted `CustomItem`s.**
-- [ ] **Users can edit a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
-- [ ] **Users can delete a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
-- [ ] **Users can update or delete `CustomItem`s that have been created from the detail page.**
+- [X] **Users can view a list of all submitted `CustomItem`s.**
+- [X] **Users can edit a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
+- [X] **Users can delete a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
+- [X] **Users can update or delete `CustomItem`s that have been created from the detail page.**
 
 
 The following **optional** features are implemented:
@@ -34,7 +34,8 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you added to improve the site's functionality!
+- [X] 96 custom hand-drawn nail sets
+- [X] Different length options based on nail shape
 
 ## Video Walkthrough
 

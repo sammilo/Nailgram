@@ -101,7 +101,7 @@ const CreateNails = () => {
                             type='text'
                             value={price}
                             onChange={e => setPrice(e.target.value)}
-                            placeholder='$00'
+                            placeholder='$0'
                             required
                         />
                     </label>
@@ -112,7 +112,7 @@ const CreateNails = () => {
                 </form>
 
                 <div className='preview'>
-                    <h3>Preview</h3>
+                    <p>Preview</p>
                     {previewSrc
                         ? <img src={previewSrc} alt='Nail preview' />
                         : <p>No preview available</p>
